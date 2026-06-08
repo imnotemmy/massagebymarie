@@ -9,7 +9,7 @@ export default function Contact() {
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
   const chatPhone = '+13046290581'
-  const chatMessage = 'Hi, I would like to book a massage session. Please let me know your availability.'
+  const chatMessage = 'Hi, I would like to book a massage session. Please let me know your availability. My zip code is:'
 
   const [formData, setFormData] = useState({
     name: '',
