@@ -11,6 +11,7 @@ export default function Contact() {
     zipcode: '',
     service: '',
     datetime: '',
+    paymentmethod: '',
     message: '',
   })
 
@@ -20,6 +21,7 @@ Name: ${formData.name || 'Not provided'}
 Zip code: ${formData.zipcode || 'Not provided'}
 Service: ${formData.service || 'Not provided'}
 Preferred date/time: ${formData.datetime || 'Not provided'}
+Preferred payment method: ${formData.paymentmethod || 'Not provided'}
 Notes: ${formData.message || 'Not provided'}
 
 Thank you!`
@@ -198,6 +200,28 @@ Thank you!`
                   onChange={handleChange}
                   className="w-full rounded-lg border border-border bg-background px-4 py-3 transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
                 />
+              </div>
+              <div>
+                <label htmlFor="paymentmethod" className="mb-2 block text-sm font-medium text-foreground">
+                  Preferred Payment Method
+                </label>
+                <select 
+                  type="paymentmethod"
+                  id="paymentmethod"
+                  name="paymentmethod"
+                  value={formData.paymentmethod}
+                  onChange={handleChange}
+                  className="w-full rounded-lg border border-border bg-background px-4 py-3 transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Select a payment method</option>
+                  <option value="cashapp">Cash App</option>
+                  <option value="bitcoin">Bitcoin</option>
+                  <option value="paypal">PayPal</option>
+                  <option value="zelle">Zelle</option>
+                  <option value="venmo">Venmo</option>
+                  <option value="applepay">Apple Pay</option>
+                  <option value="chime">Chime</option>
+                </select>
               </div>
 
               <div>
